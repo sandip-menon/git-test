@@ -1,0 +1,3 @@
+<apex:page controller="PaginationController1">
+  <c:PaginationComponent listo="{!conList}" listofield="{!ConFieldList}"/>
+</apex:page>

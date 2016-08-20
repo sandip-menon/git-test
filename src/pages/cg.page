@@ -1,0 +1,21 @@
+<apex:page standardController="case">
+    <apex:sectionHeader title="Case" subtitle="{!case.CaseNumber}"/>
+    <apex:pageBlock title="Case">
+
+        <apex:pageBlockSection title="" columns="2">
+            <apex:outputField title="Case Owner" value="{!case.OwnerId}"/>
+            <apex:outputField title="Contact Name" value="{!case.ContactId}"/>
+            <apex:outputField title="Account Name" value="{!case.AccountId}"/>
+            <apex:outputField title="Status" value="{!case.Status}"/>
+            <apex:outputField title="Priority" value="{!case.Priority}"/>
+            <apex:outputField title="Case Origin" value="{!case.Origin}"/>
+            <apex:outputField title="Subject" value="{!case.Subject}"/>
+            <apex:outputField title="Description" value="{!case.Description}"/>
+            <apex:outputField title="Web Email" value="{!case.SuppliedEmail}"/>
+            <!--apex:outputField title="Contact Company" value="{!case.Contact_Company__c}"/>
+            <apex:outputField title="Contact Address" value="{!case.Contact_Address__c}"/ -->
+            <apex:outputField title="Name" value="{!case.Name__c}"/>
+        </apex:pageBlockSection>
+
+    </apex:pageBlock>
+</apex:page>

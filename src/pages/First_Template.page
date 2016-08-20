@@ -1,0 +1,500 @@
+<apex:page docType="html" applyBodyTag="false" showHeader="false" applyHtmlTag="false" standardStylesheets="false">
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>Export.gov</title>
+        <!-- Mobile Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Bootstrap core CSS -->
+        <link href="{!URLFor($Resource.ITA, 'skins/css/bootstrap.css')}" rel="stylesheet" />
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{!URLFor($Resource.ITA, 'skins/font-awesome.min.css')}" />
+        <!-- Plugins -->
+        <link href="{!URLFor($Resource.ITA, 'skins/css/animations.css')}" rel="stylesheet" />
+        <!-- Core CSS file -->
+        <link href="{!URLFor($Resource.ITA, 'skins/css/export-long.css')}" rel="stylesheet" />
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="front no-trans">
+        <apex:form >
+        <!-- scrollToTop -->
+        <!-- ================ -->
+        <div class="scrollToTop"><i class="fa fa-chevron-up fa-6"></i></div>
+
+        <!-- page wrapper start -->
+        <!-- ================ -->
+        <div class="page-wrapper">
+
+            <!-- header-top start -->
+            <!-- ================ -->
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-2  col-sm-6">
+
+                            <!-- header-top-first start -->
+                            <!-- ================ -->
+                            <div class="header-top-first clearfix">
+                                <ul class="social-links clearfix hidden-xs">
+                                    <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
+                                    <li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                                    <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
+                                    <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="pinterest"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
+                                </ul>
+                                <div class="social-links hidden-lg hidden-md hidden-sm">
+                                    <div class="btn-group dropdown">
+                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-share-alt"></i></button>
+                                        <ul class="dropdown-menu dropdown-animation">
+                                            <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                            <li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
+                                            <li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                                            <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                                            <li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube-play"></i></a></li>
+                                            <li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
+                                            <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                                            <li class="pinterest"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- header-top-first end -->
+
+                        </div>
+                        <div class="col-xs-10 col-sm-6">
+
+                            <!-- header-top-second start -->
+                            <!-- ================ -->
+                            <div id="header-top-second"  class="clearfix">
+
+                                <!-- header top dropdowns start -->
+                                <!-- ================ -->
+                                <div class="header-top-dropdown">
+                                    <div class="btn-group dropdown">
+                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i> Search</button>
+                                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                            <li>
+                                                <form role="search" class="search-box">
+                                                    <div class="form-group has-feedback">
+                                                        <input type="text" class="form-control" placeholder="Search" />
+                                                        <i class="fa fa-search form-control-feedback"></i>
+                                                    </div>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group dropdown">
+                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>{!$User.FirstName}</button>
+                                    </div>
+                                    <div class="btn-group dropdown">
+                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>Login</button>
+                                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                            <li>
+                                                <form class="login-form">
+                                                    <div class="form-group has-feedback">
+                                                        <label class="control-label">Username</label>
+                                                        <input type="text" class="form-control" placeholder="" />
+                                                        <i class="fa fa-user form-control-feedback"></i>
+                                                    </div>
+                                                    <div class="form-group has-feedback">
+                                                        <label class="control-label">Password</label>
+                                                        <input type="password" class="form-control" placeholder="" />
+                                                        <i class="fa fa-lock form-control-feedback"></i>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-group btn-dark btn-sm">Log In</button>
+                                                    <span>or</span>
+                                                    <button type="submit" class="btn btn-group btn-default btn-sm">Register</button>
+
+                                                    <ul>
+                                                        <li><a href="#">Forgot your password?</a></li>
+                                                    </ul>
+                                                    <div class="divider"></div>
+                                                    <span class="text-center">Login with</span>
+                                                    <ul class="social-links clearfix">
+                                                        <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                                                        <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                                        <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                                                    </ul>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group dropdown">
+                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-plus-square"></i> Register</button>
+
+                                    </div>
+
+                                </div>
+                                <!--  header top dropdowns end -->
+
+                            </div>
+                            <!-- header-top-second end -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header-top end -->
+
+            <!-- header start classes:
+            ================ -->
+            <header class="header fixed clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+
+                            <!-- header-left start -->
+                            <!-- ================ -->
+                            <div class="header-left clearfix">
+
+                                <!-- logo -->
+                                <div class="logo" >
+                                    <a href="index.html"><img id="logo" src="{!URLFor($Resource.ITA, 'skins/images/eg3-green.png')}" alt="logo" /></a>
+                                </div>
+
+                                <!-- name-and-slogan -->
+                                <div class="site-slogan" style="text-indent: 5px; color:#fff;font-size:11px;">
+                                    Helping U.S. Companies Export
+                                </div>
+
+                            </div>
+                            <!-- header-left end -->
+
+                        </div>
+                        <div class="col-md-10">
+
+                            <!-- header-right start -->
+                            <!-- ================ -->
+                            <div class="header-right clearfix">
+
+                                <!-- main-navigation start -->
+                                <!-- ================ -->
+                                <div class="main-navigation animated">
+
+                                    <!-- navbar start -->
+                                    <!-- ================ -->
+                                    <nav class="navbar navbar-default" role="navigation">
+                                        <div class="container-fluid">
+
+                                            <!-- Toggle get grouped for better mobile display -->
+                                            <div class="navbar-header">
+                                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                                    <span class="sr-only">Toggle navigation</span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Collect the nav links, forms, and other content for toggling -->
+                                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                                <ul class="nav navbar-nav navbar-right">
+
+
+
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">EXPORT BASICS</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Export Planning</a></li>
+                                                            <li><a href="#">International Sales &amp; Marketing</a></li>
+                                                            <li><a href="#">Selling Online</a></li>
+                                                            <li><a href="#">Find Business Partners</a></li>
+                                                            <li><a href="#">Financing &amp; Payments</a></li>
+                                                            <li><a href="#">Trade Agreements</a></li>
+                                                            <li><a href="#">Documentation &amp; Shipping</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">MARKET INTELLIGENCE</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">By Industry</a></li>
+                                                            <li><a href="#">By Country and Region</a></li>
+                                                            <li><a href="#">Trade Opportunities</a></li>
+                                                            <li><a href="#">Search Market Intelligence</a></li>
+                                                        </ul>
+                                                    </li>
+
+
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">LAWS &amp; REGULATIONS</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Safe Harbor</a></li>
+                                                            <li><a href="#">Export Regulations</a></li>
+                                                            <li><a href="#">Foreign Regulations</a></li>
+                                                            <li><a href="#">Intellectual Property Protection</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">TRADE BARRIERS</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Foreign Anti-Dumping Actions</a></li>
+                                                            <li><a href="#">Foreign Countervailing Duty Actions</a></li>
+                                                            <li><a href="#">Report a Trade Barrier Hotline</a></li>
+                                                            <li><a href="#">Case Studies</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">EVENTS</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Trade Missions</a></li>
+                                                            <li><a href="#">Training Programs</a></li>
+                                                            <li><a href="#">Webinars</a></li>
+                                                            <li><a href="#">Discover Global Markets</a></li>
+                                                            <li><a href="#">Search All Events</a></li>
+                                                            <li><a href="#">Trade Shows</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CONTACTS</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Advocacy Program</a></li>
+                                                            <li><a href="#">Domestic Offices</a></li>
+                                                            <li><a href="#">International Offices</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">For Exporters</a></li>
+                                                            <li><a href="#">Trade Agreements Compliance (TAC) Program</a></li>
+                                                            <li><a href="#">Commercial Service (CS)</a></li>
+                                                            <div class="divider"></div>
+                                                            <li><a href="#">Trade Promotion Programs</a></li>
+                                                            <li><a href="#">Initiatives (DBIA, NEI/NEXT, Look South, etc.)</a></li>
+                                                            <li><a href="#">Strategic Partnership Program</a></li>
+                                                            <li><a href="#">Trade Fair Certification</a></li>
+                                                            <li><a href="#">Certified Trade Mission Information</a></li>
+                                                            <li><a href="#">International Buyer Programs</a></li>
+                                                            <li><a href="#">Market Development Cooperator Program</a></li>
+                                                        </ul>
+                                                    </li>
+
+
+
+
+
+
+
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </nav>
+                                    <!-- navbar end -->
+
+                                </div>
+                                <!-- main-navigation end -->
+
+                            </div>
+                            <!-- header-right end -->
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header end -->
+
+<br /><br />
+            <div class="main">
+            <div class="container">
+            <!-- Body Content start -->
+
+            <apex:insert name="Case_Page" />
+
+            <!-- Body Content end -->
+            </div>
+            </div>
+
+<br /><br />
+
+            <!-- footer start (Add "light" class to #footer in order to enable light footer) -->
+            <!-- ================ -->
+            <footer id="footer" class="light">
+
+                <!-- .footer start -->
+                <!-- ================ -->
+                <div class="footer">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="space-bottom hidden-lg hidden-xs"></div>
+                            <div class="col-sm-6 col-md-2">
+                                <div class="footer-content">
+                                    <h5>EXPORT BASICS</h5>
+                                    <nav>
+                                        <ul class="nav nav-pills nav-stacked">
+                                                            <li><a href="#">Export Planning</a></li>
+                                                            <li><a href="#">International Sales &amp; Marketing</a></li>
+                                                            <li><a href="#">Selling Online</a></li>
+                                                            <li><a href="#">Find Business Partners</a></li>
+                                                            <li><a href="#">Financing &amp; Payments</a></li>
+                                                            <li><a href="#">Trade Agreements</a></li>
+                                                            <li><a href="#">Documentation &amp; Shipping</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <div class="space-bottom hidden-lg hidden-xs"></div>
+                            <div class="col-sm-6 col-md-2">
+                                <div class="footer-content">
+                                    <h5>MARKET INTELLIGENCE</h5>
+                                    <nav>
+                                        <ul class="nav nav-pills nav-stacked">
+                                                            <li><a href="#">By Industry</a></li>
+                                                            <li><a href="#">By Country and Region</a></li>
+                                                            <li><a href="#">Trade Opportunities</a></li>
+                                                            <li><a href="#">Search Market Intelligence</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <div class="space-bottom hidden-lg hidden-xs"></div>
+                            <div class="col-sm-6 col-md-2">
+                                <div class="footer-content">
+                                    <h5>LAWS &amp; REGULATIONS</h5>
+                                    <nav>
+                                        <ul class="nav nav-pills nav-stacked">
+                                                            <li><a href="#">Safe Harbor</a></li>
+                                                            <li><a href="#">Export Regulations</a></li>
+                                                            <li><a href="#">Foreign Regulations</a></li>
+                                                            <li><a href="#">Intellectual Property Protection</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <div class="space-bottom hidden-lg hidden-xs"></div>
+                            <div class="col-sm-6 col-md-2">
+                                <div class="footer-content">
+                                    <h5>TRADE BARRIERS</h5>
+                                    <nav>
+                                        <ul class="nav nav-pills nav-stacked">
+                                                            <li><a href="#">Foreign Anti-Dumping Actions</a></li>
+                                                            <li><a href="#">Foreign Countervailing Duty Actions</a></li>
+                                                            <li><a href="#">Report a Trade Barrier Hotline</a></li>
+                                                            <li><a href="#">Case Studies</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <div class="space-bottom hidden-lg hidden-xs"></div>
+                            <div class="col-sm-6 col-md-2">
+                                <div class="footer-content">
+                                    <h5>EVENTS</h5>
+                                    <nav>
+                                        <ul class="nav nav-pills nav-stacked">
+                                                            <li><a href="#">Trade Missions</a></li>
+                                                            <li><a href="#">Training Programs</a></li>
+                                                            <li><a href="#">Webinars</a></li>
+                                                            <li><a href="#">Discover Global Markets</a></li>
+                                                            <li><a href="#">Search All Events</a></li>
+                                                            <li><a href="#">Trade Shows</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="footer-content">
+                                    <h5>CONTACTS</h5>
+                                    <nav>
+                                        <ul class="nav nav-pills nav-stacked">
+                                                            <li><a href="#">Advocacy Program</a></li>
+                                                            <li><a href="#">Domestic Offices</a></li>
+                                                            <li><a href="#">International Offices</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+
+
+                            <div class="space-bottom hidden-lg hidden-xs"></div>
+                            <div class="col-sm-6 col-md-2">
+                                <div class="footer-content">
+                                    <h5>SERVICES</h5>
+                                    <nav>
+                                        <ul class="nav nav-pills nav-stacked">
+                                                            <li><a href="#">For Exporters</a></li>
+                                                            <li><a href="#">Trade Agreements Compliance (TAC) Program</a></li>
+                                                            <li><a href="#">Commercial Service (CS)</a></li>
+                                                            <div class="divider"></div>
+                                                            <li><a href="#">Trade Promotion Programs</a></li>
+                                                            <li><a href="#">Initiatives (DBIA, NEI/NEXT, Look South, etc.)</a></li>
+                                                            <li><a href="#">Strategic Partnership Program</a></li>
+                                                            <li><a href="#">Trade Fair Certification</a></li>
+                                                            <li><a href="#">Certified Trade Mission Information</a></li>
+                                                            <li><a href="#">International Buyer Programs</a></li>
+                                                            <li><a href="#">Market Development Cooperator Program</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="space-bottom hidden-lg hidden-xs"></div>
+                    </div>
+                </div>
+                <!-- .footer end -->
+
+                <!-- .subfooter start -->
+                <!-- ================ -->
+                <div class="subfooter">
+                    <div class="container">
+
+                            <div class="col-md-12">
+                                 <p class="footer2">
+    Export.gov is an official site of the U.S. Government<br />
+    <a href="https://help.export.gov/ics/support/ticketnewwizard.asp?style=classic&amp;feedback=true">Submit Feedback</a>&nbsp;|
+        <a href="#">Contact Us</a>&nbsp;|
+        <a href="#">Privacy Policy</a>&nbsp;|
+        <a href="#">Disclaimer</a>&nbsp;|
+        <a href="#">About Us</a>&nbsp;|
+        <a href="http://www.usa.gov">USA.gov</a>&nbsp;|
+        <!-- &nbsp;| -->
+        <a href="http://www.osec.doc.gov/omo/FOIA/FOIAWEBSITE.htm">FOIA</a>&nbsp;|
+        <a href="http://ocio.os.doc.gov/ITPolicyandPrograms/Information_Quality/index.htm">Information Quality</a>&nbsp;|
+        <a href="http://www.osec.doc.gov/ocr/nofear/nofear.htm">No Fear</a>&nbsp;|
+        <a href="#">Site Map</a>&nbsp;|
+        <a href="http://www.adobe.com/products/acrobat/readstep2.html" target="_blank">Download Adobe Reader</a>
+  </p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- .subfooter end -->
+
+            </footer>
+            <!-- footer end -->
+
+        </div>
+        <!-- page-wrapper end -->
+
+        <!-- JavaScript files
+        ================================================== -->
+        <!-- Jquery and Bootstap core js files -->
+        <script type="text/javascript" src="{!URLFor($Resource.ITA, 'skins/js/jquery.min.js')}"></script>
+        <script type="text/javascript" src="{!URLFor($Resource.ITA, 'skins/js/bootstrap.min.js')}"></script>
+        <!-- Modernizr javascript -->
+        <script type="text/javascript" src="{!URLFor($Resource.ITA, 'skins/js/modernizr.js')}"></script>
+        <!-- Initialization of Plugins -->
+        <script type="text/javascript" src="{!URLFor($Resource.ITA, 'skins/js/template.js')}"></script>
+        </apex:form>
+    </body>
+</html>
+</apex:page>

@@ -1,0 +1,23 @@
+<apex:page standardController="case" extensions="aaPage26E">
+    <apex:form id="theForm">
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!QuickSave}" rerender="theForm" />
+            </apex:pageBlockButtons>
+            <apex:messages />
+            <apex:pageBlockSection >
+                <apex:inputField value="{!case.casenumber}"/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Record Type" />
+                    <apex:outputText value="{!case.RecordTypeID}"/>
+                </apex:pageBlockSectionItem>                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Record Types" />
+                    <apex:selectList value="{!case.RecordTypeID}" >
+                        <apex:selectOptions value="{!RecordTypes}" />
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>  
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

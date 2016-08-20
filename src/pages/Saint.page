@@ -1,0 +1,11 @@
+<apex:page standardController="Saint__c" showHeader="false"> 
+  <apex:composition template="First_Template">
+   <apex:define name="Saint">
+       <h4>{!Saint__c.name}</h4>
+        <hr />
+        <apex:repeat value="{!Saint__c.Saint_contents__r}" var="pc">
+            <apex:outputtext escape="false" value="{!pc.content__r.Content__c}" />
+        </apex:repeat>    
+   </apex:define>
+  </apex:composition>
+</apex:page>

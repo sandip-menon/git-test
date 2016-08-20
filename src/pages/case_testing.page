@@ -1,0 +1,85 @@
+<apex:page standardController="Case" showHeader="true" sidebar="true" extensions="CaseEditExtension">
+    <apex:form id="myForm">
+        <apex:sectionHeader title="Case Edit" subtitle="{!Case.CaseNumber}"/>
+        <apex:pageBlock id="pgBlock" mode="edit" title="Case Edit">
+            <apex:pageBlockButtons location="both">
+                <apex:commandButton value="Save" action="{!Save}" />
+                <apex:commandButton value="Save & Close" action="{!SaveAndClose}" />
+                <apex:commandButton value="Save & New" action="{!SaveAndNew}" />
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection id="pgBlockSectionAcctInfo" title="Case Information" collapsible="false" columns="2" >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Case Owner</apex:outputLabel>                    
+                    <apex:outputField id="caseOwner" value="{!case.ownerid}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Status</apex:outputLabel>
+                    <apex:inputField id="caseStatus" value="{!case.Status}" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Case Number</apex:outputLabel>                    
+                    <apex:inputField id="caseNumber" value="{!case.CaseNumber}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Priority</apex:outputLabel>
+                    <apex:inputField id="casePriority" value="{!case.Priority}" />
+                </apex:pageBlockSectionItem>                
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Contact Name</apex:outputLabel>                    
+                    <apex:inputField id="caseContact" value="{!case.ContactId}" />
+                </apex:pageBlockSectionItem>                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Case Origin</apex:outputLabel>
+                    <apex:inputField id="caseOrigin" value="{!case.Origin}" />
+                </apex:pageBlockSectionItem>   
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Account Name</apex:outputLabel>                    
+                    <apex:inputField id="caseAccount" value="{!case.AccountId}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Type</apex:outputLabel>                    
+                    <apex:inputField id="caseType" value="{!case.Type}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Case Reason</apex:outputLabel>                    
+                    <apex:inputField id="caseReason" value="{!case.Reason}" />
+                </apex:pageBlockSectionItem>       
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection id="pgBlockSectionAdditionalInfo" title="Additional Information" collapsible="false" columns="2">
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection id="pgBlockSectionDescriptionInfo" title="Description Info" collapsible="false" columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Subject</apex:outputLabel>                    
+                    <apex:inputText id="caseSubject" value="{!case.Subject}" size="75" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Description</apex:outputLabel>                    
+                    <apex:inputTextArea id="caseDescription" value="{!case.Description}" cols="75" rows="6" />
+                </apex:pageBlockSectionItem>                 
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Internal Comments</apex:outputLabel>                    
+                    <apex:inputTextArea id="caseInternalComments" value="{!Comment}" cols="75" rows="6" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection id="pgBlockSectionOptional" title="Optional" collapsible="false" columns="1">
+                <apex:inputCheckBox value="{!UseAssignmentRules}" label="Assign using active assignment rules" />
+            </apex:pageBlockSection>            
+        </apex:pageBlock>        
+    </apex:form>
+</apex:page>

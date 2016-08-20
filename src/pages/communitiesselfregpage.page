@@ -1,0 +1,24 @@
+<apex:page id="communitiesselfregpage" showHeader="false" sidebar="false" 
+            controller="CommunitiesSelfRegController" title="{!$Label.site.user_registration}" standardStylesheets="false">
+    <apex:form id="theForm" forceSSL="true">
+        <div class="wrapper">
+            <div class="inside">                
+                <apex:pageMessages id="error"/>
+                <h2>Join our community</h2>
+                <apex:outputLabel value="First Name" for="firstName"/>
+                <apex:inputText required="true" id="firstName" value="{!firstName}" label="First Name"/>
+                <apex:outputLabel value="Last Name" for="lastName"/>
+                <apex:inputText required="true" id="lastName" value="{!lastName}" label="Last Name"/>
+                <apex:outputLabel value="{!$Label.site.community_nickname}" for="communityNickname"/>
+                <apex:inputText required="true" id="communityNickname" value="{!communityNickname}" label="{!$Label.site.community_nickname}"/>
+                <apex:outputLabel value="{!$Label.site.email}" for="email"/>
+                <apex:inputText required="true" id="email" value="{!email}" label="{!$Label.site.email}"/>
+                <apex:outputLabel value="{!$Label.site.password}" for="password"/>
+                <apex:inputSecret id="password" value="{!password}"/>
+                <apex:outputLabel value="{!$Label.site.confirm_password}" for="confirmPassword"/>
+                <apex:inputSecret id="confirmPassword" value="{!confirmPassword}"/>
+                <apex:commandLink action="{!registerUser}" value="{!$Label.site.submit}" id="submit" styleClass="signInButton"/>
+            </div>
+        </div>          
+    </apex:form>
+</apex:page>

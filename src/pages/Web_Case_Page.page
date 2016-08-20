@@ -1,0 +1,21 @@
+<apex:page standardcontroller="Case" showHeader="false">
+<apex:composition template="First_Template">
+    <apex:define name="Case_Page">
+            <h2>Report a Trade Barrier</h2>
+            <apex:pageBlock >
+                <apex:pageBlockSection >
+                    <apex:inputField value="{!Case.Name__c}"/><br/> 
+                    <!--apex:inputField value="{!Case.Contact_Company__c}"/><br/> 
+                    <apex:inputField value="{!Case.Contact_Address__c}"/><br/-->  
+                    <apex:inputField value="{!Case.Contact.Phone}"/><br/>  
+                    <apex:inputField value="{!Case.Contact.Email}"/><br/> 
+                    <apex:inputField value="{!Case.Cc_Email__c}"/><br/>     
+                    <apex:inputField value="{!Case.Does_this_complaint__c}"/><br/>     
+                    <apex:inputField value="{!Case.Tell_us_the_problem_in_your_own_words__c}"/><br/>     
+                    <apex:inputField value="{!Case.Tell_us_how_you_heard_about_us__c}"/><br/> 
+                    <apex:commandButton action="{!save}" value="Send !"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+    </apex:define>
+</apex:composition>
+</apex:page>

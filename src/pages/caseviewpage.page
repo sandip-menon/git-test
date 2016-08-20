@@ -1,0 +1,26 @@
+<apex:page standardcontroller="Case" showHeader="false">
+<apex:composition template="First_Template">
+    <apex:define name="Case_Page">
+
+<table>
+ <tr><td><b>Case Number - the number with Cases:</b></td><td><apex:outputField value="{!case.CaseNumber}"/></td></tr>
+</table>
+ 
+<apex:pageBlock >
+        <apex:pageBlockTable value="{!case}" var="case">
+            <apex:column value="{!Case.Status}"/> 
+            <apex:column value="{!Case.contact.firstname}"/>
+            <apex:column value="{!Case.priority}"/>            
+        </apex:pageBlockTable> 
+        <apex:pageblockSection >
+            <apex:outputField value="{!Case.Status}"/>
+            <apex:outputField value="{!Case.contact.firstname}"/>            
+            <apex:outputField value="{!Case.priority}"/>              
+        </apex:pageblockSection>
+    </apex:pageBlock> 
+
+    </apex:define>
+    
+    
+</apex:composition>
+</apex:page>

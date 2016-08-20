@@ -1,0 +1,13 @@
+<apex:page standardcontroller="Case" showHeader="false">
+<apex:composition template="First_Template">
+    <apex:define name="Case_Page">
+
+<table>
+ <tr><td><b>Case Number:</b></td><td><apex:outputField value="{!case.CaseNumber}"/></td></tr>
+ <tr><td><b>Type:</b></td><td><apex:outputField value="{!case.CaseNumber}"/></td></tr>
+ <tr><td><b>Last Modified Date:</b></td><td><apex:outputField value="{!case.LastModifiedDate}"/></td></tr>
+</table>
+ 
+    </apex:define>
+</apex:composition>
+</apex:page>
