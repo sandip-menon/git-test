@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
 endpointApiVersion=35.0
-endpointEnvironment=Other (Specify)
-endpointServer=sand-hu-dev-ed.my.salesforce.com
+endpointEnvironment=Production/Developer Edition
+endpointServer=www.salesforce.com
 httpsProtocol=true
 ideVersion=35.0
 keependpoint=false
@@ -9,6 +9,6 @@ metadataFormatVersion=35.0
 namespacePrefix=
 packageName=unpackaged
 preferToolingDeployment=true
-projectIdentifier=IDE-1446617265800068212
+projectIdentifier=IDE2934501314683093033
 readTimeout=400
 username=sandip_menon@yahoo.com.dev
