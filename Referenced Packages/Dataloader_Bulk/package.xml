@@ -7,5 +7,5 @@
         <members>Dataloader_Bulk</members>
         <name>Application</name>
     </types>
-    <version>36.0</version>
+    <version>35.0</version>
 </Package>
