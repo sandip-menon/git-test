@@ -61,6 +61,33 @@
                 </tr>
             </table>  
          </center>
+         
+         <center>
+            <table style="background-color:#f8f8f8; border:1; cellspacing:10; cellpadding:10;">
+                <tr>
+                    <td style="background-color:#f8f8f8;">
+                        <table align="center" width="90%" border="0" bgcolor="#ffffff">
+                            <tr><th style="text-align:center; font-size:150%; color: #32404E">Cases Requiring Action</th></tr>
+                            <tr><td style="text-align:center; font-size:500%; color: #184BE7">99</td></tr>
+                        </table>
+                    </td>
+                    
+                    <td style="background-color:#f8f8f8;">
+                        <table align="center" width="90%" border="0" bgcolor="#ffffff">
+                            <tr><th style="text-align:center; font-size:150%; color: #32404E">My Open Cases</th></tr>
+                            <tr><td style="text-align:center; font-size:500%; color: #184BE7">99</td></tr>
+                        </table>
+                    </td>
+                        
+                    <td style="background-color:#f8f8f8;">
+                        <table align="center" width="90%" border="0" bgcolor="#ffffff">
+                            <tr><th style="text-align:center; font-size:150%; color: #32404E">My Organization Cases</th></tr>
+                            <tr><td style="text-align:center; font-size:500%; color: #184BE7">99</td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>  
+         </center>
         </apex:pageBlock>
         </apex:form>
 </apex:page>
