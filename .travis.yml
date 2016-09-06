@@ -7,3 +7,5 @@ install:
   - npm install -g sfdc-travisci-coveralls
 script:
   - sfdc-travisci-coveralls
+after_success:
+  - coveralls
