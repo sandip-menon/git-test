@@ -1,0 +1,16 @@
+{
+	"name": "git-testing",
+	"version": "0.0.1",
+	"license": "GPL-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sandip-menon/git-test.git"
+	},
+	"description": "ita git code coverage testing",
+	"dependencies": {
+		"jsforce": "jsforce/jsforce",
+		"q": "*",
+		"lodash": "*",
+		"restler": "*"
+	}
+}
