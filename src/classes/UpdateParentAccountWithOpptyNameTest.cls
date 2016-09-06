@@ -17,7 +17,7 @@ private class UpdateParentAccountWithOpptyNameTest{
     Opportunity o = new Opportunity(AccountId=a.Id, Name=opportunityName, 
                                     StageName='Prospecting', CloseDate=Date.today());
 
-    // Cause the Trigger to execute.
+    // Cause the Trigger to execute
     insert o;
 
     // Verify that the results are as expected.

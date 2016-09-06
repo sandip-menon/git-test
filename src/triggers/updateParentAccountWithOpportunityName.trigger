@@ -7,7 +7,7 @@ trigger updateParentAccountWithOpportunityName on Opportunity (after insert) {
         accountIdOpportunityMap.put(o.AccountId, o);
     }
     
-    // Create a list of Accounts to Update.
+    // Create a list of Accounts to Update
     List<Account> accounts = new List<Account>();
 
     for(Account a : [SELECT Id, MRCON__c 
