@@ -8,4 +8,4 @@ install:
 script:
   - sfdc-travisci-coveralls
 after_success:
-  - coveralls
+  - ./build/scripts/run_tests.sh
